@@ -1,0 +1,31 @@
+.list {
+  color: #fff;
+  width: 300px;
+  margin: 20px auto;
+  height: 50px;
+  background-color: rgb(135, 163, 222);
+  border-radius: 5px;
+}
+.list p {
+  padding: 12px;
+}
+
+.list p input[type="checkbox"] {
+  width: 1.5em;
+  height: 1.5em;
+  padding-top: 1em;
+}
+.list p input[type="text"] {
+  width: 14em;
+  height: 1.5em;
+  border: 0;
+  padding-top: 0.1em;
+  background-color: rgb(135, 163, 222);
+  font-size: 1em;
+  color: #fff;
+}
+
+.list p span {
+  width: 1.5em;
+  height: 1.5em;
+}
