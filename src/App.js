@@ -8,14 +8,14 @@ library.add(fas);
 class App extends Component {
   state = {
     items: [],
-    currentItem: { itemContent: "", key: "" },
+    currentItem: { itemContent: "", id: "" },
   };
   //currentItem{}更新
   handleInputOnChange = (event) => {
     const name = event.target.name;
     const itemContent = event.target.value;
     this.setState({
-      currentItem: { [name]: itemContent },
+      currentItem: { [name]: itemContent, id: Date.now() },
     });
   };
   //items[]更新,currentItem{}重赋初值
@@ -27,8 +27,9 @@ class App extends Component {
     });
   };
 
-  handleDeleteItem = (index) => {
+  handleDeleteItem = (id) => {
     const items = [...this.state.items];
+    const index = items.findIndex((item) => item.id === id);
     items.splice(index, 1);
     this.setState({
       items: items,

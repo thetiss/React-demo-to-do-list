@@ -2,6 +2,8 @@
 
 Hi!there,so i started this project with the intention to practicing ReactJS.
 
+<img src="C:\Users\chenh\Desktop\react\learn from youtube\img\0-to-do-list\image-20200909104539026.png" alt="image-20200909104539026" style="zoom:67%;" />
+
 # stack
 
 ReactJS
@@ -43,9 +45,24 @@ const newArr=splice():返回被删除的数组给newArr[]
 
 <img src="C:\Users\chenh\Desktop\react\learn from youtube\img\movie-cards\image-20200908173902901.png" alt="image-20200908173902901" style="zoom:67%;" />
 
+~~~jsx
+  handleDeleteItem = (id) => {
+    const items = [...this.state.items];
+    const index = items.findIndex((item) => item.id === id);
+    items.splice(index, 1);
+    this.setState({
+      items: items,
+    });
+  };
+~~~
+
+
+
 ## `npm install node-sass`
 
 为了想要在用`listitem.scss`来定义样式。
+
+`Date.now`()赋予key值，id值；
 
 # Available Scripts
 

@@ -11,7 +11,8 @@ class ListItem extends Component {
     // item.checked = "checked";
     // this.props.handleCurrentItemStatusChange();
     //alert("Clicked");
-    console.log("onChange");
+    // console.log("onChange");
+    // console.log(Date.now());
   };
   render() {
     const {
@@ -20,9 +21,9 @@ class ListItem extends Component {
       onDelete,
       handleCurrentItemStatusChange,
     } = this.props;
-    const item = items.map((item, index) => {
+    const item = items.map((item) => {
       return (
-        <div className="list" key={index} id={index}>
+        <div className="list" key={item.id} id={item.id}>
           <p>
             <input
               type="checkbox"
@@ -36,7 +37,7 @@ class ListItem extends Component {
                 className="faicons"
                 icon="trash"
                 onClick={() => {
-                  onDelete(index);
+                  onDelete(item.id);
                 }}
               ></FontAwesomeIcon>
             </span>
